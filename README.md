@@ -63,6 +63,23 @@ Then follow the on-screen prompts.
 - The scripts are provided as-is and you use them at your own risk.
 - For system logs in `/var/log`, you need to run cleanup manually with sudo if required.
 
+## Using push.sh
+
+The `push.sh` script is provided to easily push updates to the GitHub repository. It will:
+
+1. Add the remote origin (if not already added)
+2. Set the main branch
+3. Add all changes
+4. Commit with message "Update"
+5. Push to origin main
+
+To use it after making changes:
+
+```bash
+chmod +x push.sh
+./push.sh
+```
+
 ## Contributing
 
 Feel free to fork this repository and submit pull requests for improvements.
