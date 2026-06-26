@@ -84,6 +84,8 @@ chmod +x clean-cache.sh
 
 This script provides an interactive menu to clean up specific areas:
 
+![Mac Cleanup Options Menu](Screenshot%202026-06-26%20at%2011.32.55.png)
+
 1. System Cache (`~/Library/Caches`)
 2. Downloads Folder
 3. Trash
@@ -247,6 +249,8 @@ chmod +x mac-cleanup.sh
 
 Then follow the on-screen prompts.
 
+![Homebrew Cleanup Output Example](Screenshot%202026-06-26%20at%2011.33.14.png)
+
 ## Notes
 
 - Always review what you are deleting, especially when running scripts with sudo or removing system files.
@@ -356,6 +360,27 @@ To run:
 ```bash
 chmod +x maintenance.sh
 ./maintenance.sh
+```
+
+### m4-maintenance.sh
+
+This script is specifically designed for Apple Silicon M4 series MacBooks (Air and Pro). It provides advanced hardware diagnostics, thermal monitoring, battery health metrics, SSD SMART status, Rosetta 2 process detection, and performance optimization.
+
+Key Features:
+- **Processor & Core Layout:** Displays M4 core structures (Performance vs. Efficiency cores).
+- **Unified Memory Analysis:** Analyzes current active, inactive, wired, compressed memory, and SSD swap file usage.
+- **Battery & Power Health:** Reports cycle count, condition, and maximum capacity percentage.
+- **Disk & SMART Health:** Verifies the hardware protocol and built-in SSD S.M.A.R.T. status.
+- **Thermal Diagnostic:** Checks thermal warning levels (particularly crucial for fanless MacBook Air M4 models).
+- **Rosetta 2 Process Finder:** Identifies running x86_64/Intel apps that may be impacting performance and battery efficiency.
+- **GPU Metal Shader & Cache Cleanup:** Clears macOS system caches, user app caches, and Metal shader caches (forcing recompiles for optimum M4 GPU performance).
+- **DNS Cache & Software Updates:** Flushes mDNSResponder cache and checks for macOS/Homebrew updates.
+
+To run:
+
+```bash
+chmod +x m4-maintenance.sh
+./m4-maintenance.sh
 ```
 
 ## Contributing
